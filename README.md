@@ -1,5 +1,6 @@
 # WEB-Berita
 
+LINK WEB :  https://ffaawwaazz.github.io/WEB-Berita/
 Berikut adalah penjelasan kode HTML, CSS, dan JavaScript dalam file yang telah saya buat. 
 
 ---
