@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Berita - CNN Indonesia</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .top-bar {
+            background-color: #cc0000;
+            color: white;
+            padding: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .top-bar img {
+            height: 40px;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+        }
+        nav ul li {
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        h2 {
+            text-align: center;
+            margin: 20px 0;
+        }
+        .news-container {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 20px;
+        }
+        .news-item {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            background: white;
+            border: 3px solid #807474;
+            border-radius: 10px;
+            margin-bottom: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+            cursor: pointer;
+        }
+        .news-item img {
+            width: 200px;
+            height: 120px;
+            object-fit: cover;
+            border-right: 3px solid #807474;
+        }
+        .news-content {
+            padding: 15px;
+        }
+        .news-content h3 {
+            font-size: 16px;
+            margin: 0 0 10px 0;
+        }
+        .news-content p {
+            font-size: 14px;
+            color: gray;
+        }
+        footer {
+            text-align: center;
+            padding: 15px;
+            background: #cc0000;
+            color: white;
+            margin-top: 20px;
+        }
+    </style>
+    <script>
+        function openNewsPage(title, content) {
+            const newsWindow = window.open("", "_blank");
+            newsWindow.document.write(`
+                <html>
+                <head>
+                    <title>${title}</title>
+                    <style>
+                        body { font-family: Arial, sans-serif; padding: 20px; }
+                        h1 { color: #d32f2f; }
+                    </style>
+                </head>
+                <body>
+                    <h1>${title}</h1>
+                    <p>${content}</p>
+                </body>
+                </html>
+            `);
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <div class="top-bar">
+            <img src="LOGOcnn.png" >
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Ekonomi</a></li>
+                    <li><a href="#">Olahraga</a></li>
+                    <li><a href="#">Teknologi</a></li>
+                    <li><a href="#">Hiburan</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <main>
+        <h2>LIGA KORUPSI INDONESIA</h2>
+        <div class="news-container">
+            <div class="news-item" onclick="openNewsPage('Korupsi Pertamina (kerugian negara diperkirakan Rp 968,5 triliun)')">
+                <img src="LKI01.jpg" alt="Berita 1">
+                <div class="news-content">
+                    <h3>Korupsi Pertamina (kerugian negara diperkirakan Rp 968,5 triliun)</h3>
+                    <p>Nasional • 11 jam yang lalu</p>
+                </div>
+            </div>
+            <div class="news-item" onclick="openNewsPage('Kasus Korupsi PT Timah (Rp 300 triliun)')">
+                <img src="LKI02.jpg" alt="Berita 2">
+                <div class="news-content">
+                    <h3>Kasus Korupsi PT Timah (Rp 300 triliun)</h3>
+                    <p>Nasional • 1 hari yang lalu</p>
+                </div>
+            </div>
+            <div class="news-item" onclick="openNewsPage('Eks Dirut Pertamina Nicke Bungkam', 'Usai Diperiksa Jadi Saksi di KPK.')">
+                <img src="LKI03.jpg" alt="Berita 3">
+                <div class="news-content">
+                    <h3>Kasus BLBI(Rp 138 Triliun)</h3>
+                    <p>Nasional • 1 hari yang lalu</p>
+                </div>
+            </div>
+            <div class="news-item" onclick="openNewsPage('Golkar Sebut RK Siap Diperiksa', 'Terkait Korupsi Bank BJB.')">
+                <img src="LKI04.jpeg" alt="Berita 4">
+                <div class="news-content">
+                    <h3>Penyerobotan Lahan PT Duta Palma Group (Rp 78 Triliun)</h3>
+                    <p>TV • 1 hari yang lalu</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 CNN Indonesia - Semua Hak Dilindungi</p>
+    </footer>
+</body>
+</html>
